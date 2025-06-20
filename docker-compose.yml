@@ -21,7 +21,7 @@ services:
  
   backend:
     build:
-      context: tejas2506/backend:t1
+      context: tejas2506/qs-web-backend:latest
     container_name: backend
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql-service:3306/quantumsoft
@@ -37,7 +37,7 @@ services:
  
   frontend:
     build:
-      context: tejas2506/frontend:t1
+      context: tejas2506/qs-web-frontend:latest
     container_name: frontend
     ports:
       - "5502:80"
