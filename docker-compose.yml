@@ -27,7 +27,7 @@ services:
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: root
     ports:
-      - "5000:5000"
+      - "8080:8080"
     depends_on:
       mysql-service:
         condition: service_healthy
@@ -38,7 +38,7 @@ services:
     image: tejas2506/qs-web-frontend:latest
     container_name: frontend
     ports:
-      - "80:80"
+      - "5502:80"
     depends_on:
       - backend
     networks:
